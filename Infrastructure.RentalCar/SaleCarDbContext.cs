@@ -17,7 +17,7 @@ public partial class SaleCarDbContext : DbContext
 
     public virtual DbSet<Account> Accounts { get; set; }
 
-    public virtual DbSet<Car> Cars { get; set; }
+    public virtual DbSet<CarEntity> Cars { get; set; }
 
     public virtual DbSet<RentalCar> RentalCars { get; set; }
 
@@ -44,7 +44,7 @@ public partial class SaleCarDbContext : DbContext
                 .HasColumnName("UserID");
         });
 
-        modelBuilder.Entity<Car>(entity =>
+        modelBuilder.Entity<CarEntity>(entity =>
         {
             entity.HasNoKey();
 

@@ -11,6 +11,9 @@ namespace Domain.RentalCar
     /// </summary>
     public class RV : IVehicle
     {
+        public string Model { get; set; }
+        public string CC { get; set; }
+
         public decimal CalculateRentalCost(int daysRented)
         {
             return daysRented * 120;

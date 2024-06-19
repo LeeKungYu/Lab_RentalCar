@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infrastructure.RentalCar;
 
-public partial class Car
+[Table("Car")]
+public partial class CarEntity
 {
     public int? Id { get; set; }
 

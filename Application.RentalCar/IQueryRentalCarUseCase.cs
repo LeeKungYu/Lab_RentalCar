@@ -1,4 +1,5 @@
-﻿using Domain.RentalCar;
+﻿using Application.RentalCar.ViewModels;
+using Domain.RentalCar;
 
 namespace Application.RentalCar
 {
@@ -9,5 +10,6 @@ namespace Application.RentalCar
         /// </summary>
         /// <returns></returns>
         IEnumerable<IVehicle> GetAllCars();
+        IEnumerable<AccountViewModel> GetAllAccounts();
     }
 }

@@ -29,5 +29,7 @@ namespace Domain.RentalCar
         /// <returns></returns>
         VehicleType GetVehicleType();
 
+        string Model { get; set; }
+        string CC { get; set; }
     }
 }

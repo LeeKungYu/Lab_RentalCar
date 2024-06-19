@@ -1,4 +1,6 @@
-﻿using Domain.RentalCar;
+﻿using Application.RentalCar.ViewModels;
+using Domain.RentalCar;
+using System.Collections;
 
 namespace Application.RentalCar
 {
@@ -17,6 +19,11 @@ namespace Application.RentalCar
         public IEnumerable<IVehicle> GetAllCars()
         {
             return _queryRentalCarUseCase.GetAllCars();
+        }
+
+        public IEnumerable<AccountViewModel> GetAllAccounts()
+        {
+            return _queryRentalCarUseCase.GetAllAccounts(); 
         }
 
         public TimeSpan ChoiseRentalTime(DateTime start, DateTime end)
