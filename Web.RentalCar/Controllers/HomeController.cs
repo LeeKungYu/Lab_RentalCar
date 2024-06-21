@@ -1,4 +1,5 @@
 using Infrastructure.RentalCar;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -18,11 +19,13 @@ namespace Web.RentalCar.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

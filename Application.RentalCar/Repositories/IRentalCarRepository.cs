@@ -20,6 +20,5 @@ namespace Application.RentalCar.Repositories
         /// <param name="vehicle"></param>
         /// <returns></returns>
         int SaveRentalCar(IVehicle vehicle);
-        int SaveAccount(AccountViewModel account);
     }
 }
