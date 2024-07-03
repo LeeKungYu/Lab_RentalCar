@@ -12,15 +12,18 @@ namespace Web.RentalCar.Controllers
     public class AccountController : Controller
     {
         private readonly RentalCarService _rentalCarService;
+        private readonly AccountService _accountService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IConfiguration _configuration;
 
         public AccountController(
             RentalCarService rentalCarService,
+            AccountService accountService,
             IHttpContextAccessor httpContextAccessor,
             IConfiguration configuration)
         {
             _rentalCarService = rentalCarService;
+            _accountService = accountService;
             _httpContextAccessor = httpContextAccessor;
             _configuration = configuration;
         }
@@ -42,7 +45,7 @@ namespace Web.RentalCar.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (account.UserId == "Nick")
+                if (_accountService.ValidationAccount(account))
                 {
                     if (ProcessLogin(account))
                     {
@@ -74,6 +77,20 @@ namespace Web.RentalCar.Controllers
         /// <returns></returns>
         public IActionResult Register()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(AccountViewModel account)
+        {
+            if (ModelState.IsValid)
+            {
+                if (_accountService.RegisterAccount(account))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
             return View();
         }
 

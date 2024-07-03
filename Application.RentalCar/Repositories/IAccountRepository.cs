@@ -29,5 +29,13 @@ namespace Application.RentalCar.Repositories
         /// <param name="account"></param>
         /// <returns></returns>
         int DeleteAccount(int id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        AccountViewModel GetAccount(string userId);
+
     }
 }
