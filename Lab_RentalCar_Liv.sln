@@ -21,7 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{4CF77B28-EB20-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{32F1D800-6ED0-41DC-A5E6-64614DA16B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.RentalCar", "Common.RentalCar\Common.RentalCar.csproj", "{EED828B2-B25C-4E61-B678-9B685F7EBA96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.RentalCar", "Common.RentalCar\Common.RentalCar.csproj", "{EED828B2-B25C-4E61-B678-9B685F7EBA96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9EE24AF5-A75B-4D9C-B982-44940068A9B2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
